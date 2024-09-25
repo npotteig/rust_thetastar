@@ -55,7 +55,7 @@ Output
 - `final_path` is a list of 3D tuples in NED
 - `context` is a concatentated String with messages delimited by `\n`. There are two types of messages:
     - Invalid Goal: `"IG: x y z"` Two cases: The first case is if the inputted initial goal is deemed invalid and `is_min_support` is set to `true`, the search will attempt to find a valid goal in range `free_space_search_max_range`. For each voxel cell it deems not in a freespace, it will create an invalid goal message and append to `context`. The second case occurs if the path planning was executed but a path could not be found. In this case an invalid goal message is created for the current goal set.
-    - Goal Found: `"GF: x y z"` If a path is successfully found to a goal point this message will be appended to `context` indicating success. (Note: this message can be appended about multiple invalid goal messages if a valid goal is discovered)
+    - Goal Found: `"GF: x y z"` If a path is successfully found to a goal point this message will be appended to `context` indicating success. (Note: this message can be appended after multiple invalid goal messages if a valid goal is discovered)
 
 ## Testing
 
